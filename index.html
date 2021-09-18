@@ -82,14 +82,17 @@
     });
     $("<li>Hi, I'm a new li.</li>").appendTo('ol');
     $('ol').remove();
-    $('h4').after('<p>I apologize. There should never been a list here.</p>');
+    $('h4').after('<p>I apologize. There should have never been a list here.</p>');
     $('.form-control').on('change', function () {
       let $r = $('.form-control').eq(0).val();
       let $g = $('.form-control').eq(2).val();
       let $b = $('.form-control').eq(1).val();
       $('body').css("background-color", function () {
-        return `rgb(${$r}, ${$g}, ${$b})`
-      })
+        return `rgb(${$r}, ${$g}, ${$b})`;
+      });
+    });
+    $('img').on('click', function () {
+      $(this).remove();
     })
   </script>
 </body>
