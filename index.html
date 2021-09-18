@@ -81,6 +81,8 @@
       return Math.floor(Math.random() * 100) + 1
     });
     $("<li>Hi, I'm a new li.</li>").appendTo('ol');
+    $('ol').remove();
+    $('h4').after('<p>I apologize. There should never been a list here.</p>');
   </script>
 </body>
 
